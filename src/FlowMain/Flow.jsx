@@ -37,6 +37,9 @@ const FlowDiagram = observer(() => {
     Store.isSidebarVisible1 = false;
   };
 
+
+
+  
   return (
     <div className="w-full h-screen relative">
       {/* Navbar */}
