@@ -1,0 +1,424 @@
+/* General Popup Container */
+.popup-container {
+  position: absolute;
+  width: 300px;
+  
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  color:black;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(-50%) scale(0.9);
+  opacity: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  
+}
+
+/* Popup Visibility */
+.popup-container.visible {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  animation: popupIn 0.3s ease-out;
+}
+
+/* Popup Content */
+.popup-content {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Popup Title */
+.popup-title {
+  font-size: 12px;
+  font-weight: 700;
+  color:  #000000;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+.popup-title1 {
+  font-size: 12px;
+  font-weight: 700;
+  color:  #000000;
+  width : full;
+  height : full ;
+ 
+  padding-top: 2rem;
+ 
+  
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.popup-title:hover {
+  color: #007bff;
+}
+
+/* Popup Text */
+.popup-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: -12px;
+  right: 130px;
+
+  height: 30px;
+ 
+  width: 30px;
+  background: #ff4081;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+
+  z-index: 1000;
+}
+.close-btn100 {
+  position: absolute;
+  top: -12px;
+  right: 400px;
+
+  height: 30px;
+ 
+  width: 30px;
+  background: #ff4081;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+
+  z-index: 1000;
+}
+
+
+
+/* .close-btn:hover {
+  background: #f50057;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+} */
+
+/* Confirm Button */
+.confirm-btn {
+  display: block;
+  margin-top: 1rem;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.125rem;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Popup Animation */
+/* @keyframes popupIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+} */
+
+/* Custom Node Container */
+.custom-node {
+  width: 200px;
+  height: 100px;
+  margin-top: 2px;
+  margin-left: 50px;
+  border: 2px solid #ddd;
+  border-radius: 60px;
+  padding: 2px;
+  text-align: center;
+  background: #ffffff;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-node:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title and Edit Button Styling */
+.custom-node-title {
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.custom-node-title:hover {
+  color: #007bff;
+}
+
+/* Handles Styling */
+.handle-source,
+.handle-target {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.handle-source {
+  left: 100%;
+  transform: translateX(-50%);
+}
+
+.handle-target {
+  right: 100%;
+  transform: translateX(50%);
+}
+
+/* Popup Content Styling */
+.popup-content-container {
+  position: absolute;
+  width: 308px;
+  height: 370px; 
+ 
+  padding: 1.5rem;
+border-radius: 38px;
+  color:black;
+background-color: white;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+
+  
+  z-index: 10;
+}
+.popup-content-container1 {
+  position: absolute;
+  width: 700px;
+  height: 400px; 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ align-items: center;
+  padding: 18px;
+border-radius: 38px;
+  color:black;
+background-color: white;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+
+  
+  z-index: 10;
+}
+.popup-content-inner {
+  max-height: 320px; /* Adjust based on your layout */
+  overflow-y: auto; /* Enable scrolling inside the popup */
+  padding-right: 8px; /* Prevents scrollbar overlap */
+}
+.popup-content-inner1 {
+  max-height: 260px; /* Adjust based on your layout */
+  overflow-y: auto; /* Enable scrolling inside the popup */
+  padding-right: 8px; /* Prevents scrollbar overlap */
+}
+.popup-content-inner2 {
+  height: 100%; /* Adjust based on your layout */
+  width: 100%;
+  overflow-y: auto; /* Enable scrolling inside the popup */
+  padding-right: 8px; /* Prevents scrollbar overlap */
+}
+/* .popup-content-container::-webkit-scrollbar {
+  display: none;
+} */
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* Confirm Button for Popup */
+.popup-confirm-btn {
+  display: block;
+  margin-top: 1rem;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.125rem;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-confirm-btn:hover {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.popup-content-container input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.popup-content-container1 input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.popup-content-container input:focus {
+  border-color: #007bff;
+}
+
+.popup-content-container ul {
+  margin: 10px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.popup-content-container li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+.popup-content-container1 input:focus {
+  border-color: #007bff;
+}
+
+.popup-content-container1 ul {
+  margin: 10px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.popup-content-container1 li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.popup-content-container li:last-child {
+  border-bottom: none;
+}
+
+.popup-content-container .no-data {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+}
+.popup-content-container1 li:last-child {
+  border-bottom: none;
+}
+
+.popup-content-container1 .no-data {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+}
+.primary-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 40px;
+  right: 120px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.primary{
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.primary-btn1 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+right: 102px;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.primary-btn11 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.primary-btn2 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+right: 120px;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.primary-btn:active {
+  background-color: #004080;
+  transform: scale(0.98);
+}

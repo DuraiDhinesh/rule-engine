@@ -1,0 +1,85 @@
+.container {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  
+  
+  .iconsContainer {
+    position: absolute;
+    left: -60px; /* Adjust based on icon size */
+    top: 70%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    color: white;
+    
+    width: 80px;
+    
+  }
+  
+  .icon {
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  .iconsContainer .icon:nth-child(1) {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: rgba(255, 87, 51, 0.9);
+  }
+  
+  .iconsContainer .icon:nth-child(2) {
+    top: 100%;
+    left: 30%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+  
+    background-color: rgba(52, 152, 219, 0.9); /* Soft Sky Blue */
+  }
+  
+  .iconsContainer .icon:nth-child(3) {
+    top: 50%;
+    left: 0%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    background-color: rgba(39, 174, 96, 0.9); /* Elegant Green */
+  }
+  
+  .iconsContainer .icon:nth-child(4) {
+    top: 0%;
+    left: 30%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+  
+    background-color: rgba(155, 89, 182, 0.9); /* Rich Purple */
+  }
+  .iconsContainer .icon:nth-child(5) {
+    top: 25%;
+    left: 75%;
+    background-color: rgba(44, 62, 80, 0.9); /* Charcoal Gray */
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  .hidden1 {
+   opacity:0 ;
+    
+  }
+  
+  .visible1 {
+    opacity: 1;
+  }
